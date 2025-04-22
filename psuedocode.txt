@@ -1,0 +1,47 @@
+FUNCTION greedy_algorithm(packages, capacity, num_packages_limit) 
+
+    FOR package in packages 
+
+        IF current_weight + package.weight > capacity or num_packages_limit == 0: 
+
+            break 
+
+        ELSE  
+
+            load_package(package) 
+
+	num_packages_limt -= 1 
+
+
+
+FUNCTION knapsack(packages, weight_capacity, num_packages_limit):
+    num_rows = length(packages)
+    num_cols = capacity + 1
+
+    for i from 1 to num_rows:
+        for j from 1 to num_cols:
+            if packages[i-1] <= j:
+                matrix[i][j] = max(matrix[i-1][j], matrix[i-1][j-packages[i-1]]
+                + packages[i-1])
+            else:
+                matrix[i-1][j]    
+
+    current_weight = last element of matrix
+    remaining_package_limit = num_packages_limit
+    remaining_capacity = capacity 
+    current_deliveries = []
+
+    for i from num_rows - 1 to 0:
+        if current_weight, remaining_package_limit, or remaining_capacity <= 0:
+            break
+        else if remaining_capacity < packages[i-1]:
+            break
+        else if current_weight == matrix[i-1][remaining_capacity]:
+            continue
+        else:
+            add packages[i-1] to path
+            decrement current_weight, remaining_capacity, and remaining_package_limit
+        
+    remove packages in path from original list of packages
+    
+    return path and score of optimal bag
